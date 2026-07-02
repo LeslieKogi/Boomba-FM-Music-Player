@@ -1,7 +1,5 @@
-#include <QApplication>
-#include <QAudioOutput>
-#include <QMediaPlayer>
 #include "mainwindow.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
@@ -9,14 +7,5 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
-
-    QMediaPlayer *player = new QMediaPlayer;
-    QAudioOutput *output = new QAudioOutput;
-
-    player->setAudioOutput(output);
-    player->setSource(QUrl::fromLocalFile("C:/Users/bridg/Downloads/time.mp3"));
-    output->setVolume(0.8);
-    player->play();
-
-    return a.exec();
+     return a.exec();
 }

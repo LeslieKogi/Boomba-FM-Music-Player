@@ -31,5 +31,8 @@ public:
 private:
     Ui::MainWindow *ui;
     QList<Song> musicLibrary; // List to store songs in the music library
+
+private slots:
+    void onSongSelected(int currentRow); // Slot to handle song selection from the list widget.
 };
 #endif // MAINWINDOW_H
