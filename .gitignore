@@ -19,4 +19,8 @@ CMakeCache.txt
 *.exe
 
 # Autosaves
+# Autosaves
 *.autosave
+
+# Qt Creator user settings
+CMakeLists.txt.user
