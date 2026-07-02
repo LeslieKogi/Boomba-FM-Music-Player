@@ -1,6 +1,6 @@
 #include "song.h"
 
-song::song() 
+Song::Song() 
 {
     m_title = "";
     m_artist = "";
@@ -16,7 +16,7 @@ song::song()
         m_duration = duration;
     }
 
-    Qstring Song::getTitle() const
+    QString Song::getTitle() const
     {
         return m_title;
     }

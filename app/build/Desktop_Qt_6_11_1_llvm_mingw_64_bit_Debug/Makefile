@@ -271,6 +271,54 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+musiclibrary.obj: musiclibrary.cpp.obj
+.PHONY : musiclibrary.obj
+
+# target to build an object file
+musiclibrary.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/musiclibrary.cpp.obj
+.PHONY : musiclibrary.cpp.obj
+
+musiclibrary.i: musiclibrary.cpp.i
+.PHONY : musiclibrary.i
+
+# target to preprocess a source file
+musiclibrary.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/musiclibrary.cpp.i
+.PHONY : musiclibrary.cpp.i
+
+musiclibrary.s: musiclibrary.cpp.s
+.PHONY : musiclibrary.s
+
+# target to generate assembly for a file
+musiclibrary.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/musiclibrary.cpp.s
+.PHONY : musiclibrary.cpp.s
+
+song.obj: song.cpp.obj
+.PHONY : song.obj
+
+# target to build an object file
+song.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/song.cpp.obj
+.PHONY : song.cpp.obj
+
+song.i: song.cpp.i
+.PHONY : song.i
+
+# target to preprocess a source file
+song.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/song.cpp.i
+.PHONY : song.cpp.i
+
+song.s: song.cpp.s
+.PHONY : song.s
+
+# target to generate assembly for a file
+song.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/song.cpp.s
+.PHONY : song.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -295,6 +343,12 @@ help:
 	@echo ... mainwindow.obj
 	@echo ... mainwindow.i
 	@echo ... mainwindow.s
+	@echo ... musiclibrary.obj
+	@echo ... musiclibrary.i
+	@echo ... musiclibrary.s
+	@echo ... song.obj
+	@echo ... song.i
+	@echo ... song.s
 .PHONY : help
 
 

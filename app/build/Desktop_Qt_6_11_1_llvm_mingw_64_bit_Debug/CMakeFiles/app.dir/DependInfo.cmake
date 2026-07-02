@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/mocs_compilation.cpp" "CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj.d"
   "C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/main.cpp" "CMakeFiles/app.dir/main.cpp.obj" "gcc" "CMakeFiles/app.dir/main.cpp.obj.d"
   "C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/mainwindow.cpp" "CMakeFiles/app.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/app.dir/mainwindow.cpp.obj.d"
+  "C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/musiclibrary.cpp" "CMakeFiles/app.dir/musiclibrary.cpp.obj" "gcc" "CMakeFiles/app.dir/musiclibrary.cpp.obj.d"
+  "C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/song.cpp" "CMakeFiles/app.dir/song.cpp.obj" "gcc" "CMakeFiles/app.dir/song.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

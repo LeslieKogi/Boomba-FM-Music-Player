@@ -1,18 +1,18 @@
 #include "musiclibrary.h"
 
-musicLibrary::musicLibrary() 
+MusicLibrary::MusicLibrary() 
 {
     // Constructor implementation
 }
-void musicLibrary::addSong(const Song &song) 
+void MusicLibrary::addSong(const Song &song) 
 {
     m_songs.append(song);
 }
-QVector<Song> musicLibrary::getAllSongs() const
+QVector<Song> MusicLibrary::getAllSongs() const
 {
     return m_songs;
 }
-QVector<Song> musicLibrary::searchByArtist(const QString &artist) const
+QVector<Song> MusicLibrary::searchByArtist(const QString &artist) const
 {
     QVector<Song> result;
     for (const Song &song : m_songs) 

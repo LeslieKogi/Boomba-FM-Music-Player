@@ -926,6 +926,10 @@ C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/mainwindow.h
  mdp:C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/vadefs.h
  mdp:C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/moc_predefs.h
  mdp:C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/mainwindow.h
+C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/song.h
+C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/musiclibrary.h
 C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/main.cpp
 C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/mainwindow.cpp
  uic:./ui_mainwindow.h
+C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/song.cpp
+C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/musiclibrary.cpp

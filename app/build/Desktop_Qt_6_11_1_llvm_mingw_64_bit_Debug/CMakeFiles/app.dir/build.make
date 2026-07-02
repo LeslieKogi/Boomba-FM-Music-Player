@@ -120,11 +120,43 @@ CMakeFiles/app.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/mainwindow.cpp.s"
 	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\mainwindow.cpp -o CMakeFiles\app.dir\mainwindow.cpp.s
 
+CMakeFiles/app.dir/song.cpp.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/song.cpp.obj: CMakeFiles/app.dir/includes_CXX.rsp
+CMakeFiles/app.dir/song.cpp.obj: C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/song.cpp
+CMakeFiles/app.dir/song.cpp.obj: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\build\Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/song.cpp.obj"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/song.cpp.obj -MF CMakeFiles\app.dir\song.cpp.obj.d -o CMakeFiles\app.dir\song.cpp.obj -c C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\song.cpp
+
+CMakeFiles/app.dir/song.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/song.cpp.i"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\song.cpp > CMakeFiles\app.dir\song.cpp.i
+
+CMakeFiles/app.dir/song.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/song.cpp.s"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\song.cpp -o CMakeFiles\app.dir\song.cpp.s
+
+CMakeFiles/app.dir/musiclibrary.cpp.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/musiclibrary.cpp.obj: CMakeFiles/app.dir/includes_CXX.rsp
+CMakeFiles/app.dir/musiclibrary.cpp.obj: C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/musiclibrary.cpp
+CMakeFiles/app.dir/musiclibrary.cpp.obj: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\build\Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/musiclibrary.cpp.obj"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/musiclibrary.cpp.obj -MF CMakeFiles\app.dir\musiclibrary.cpp.obj.d -o CMakeFiles\app.dir\musiclibrary.cpp.obj -c C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\musiclibrary.cpp
+
+CMakeFiles/app.dir/musiclibrary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/musiclibrary.cpp.i"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\musiclibrary.cpp > CMakeFiles\app.dir\musiclibrary.cpp.i
+
+CMakeFiles/app.dir/musiclibrary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/musiclibrary.cpp.s"
+	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\musiclibrary.cpp -o CMakeFiles\app.dir\musiclibrary.cpp.s
+
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/app.dir/main.cpp.obj" \
-"CMakeFiles/app.dir/mainwindow.cpp.obj"
+"CMakeFiles/app.dir/mainwindow.cpp.obj" \
+"CMakeFiles/app.dir/song.cpp.obj" \
+"CMakeFiles/app.dir/musiclibrary.cpp.obj"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
@@ -132,6 +164,8 @@ app_EXTERNAL_OBJECTS =
 app.exe: CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj
 app.exe: CMakeFiles/app.dir/main.cpp.obj
 app.exe: CMakeFiles/app.dir/mainwindow.cpp.obj
+app.exe: CMakeFiles/app.dir/song.cpp.obj
+app.exe: CMakeFiles/app.dir/musiclibrary.cpp.obj
 app.exe: CMakeFiles/app.dir/build.make
 app.exe: C:/Qt/6.11.1/llvm-mingw_64/lib/libQt6Widgets.a
 app.exe: C:/Qt/6.11.1/llvm-mingw_64/lib/libQt6Gui.a
@@ -141,7 +175,7 @@ app.exe: app.exe.manifest
 app.exe: CMakeFiles/app.dir/linkLibs.rsp
 app.exe: CMakeFiles/app.dir/objects1.rsp
 app.exe: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\build\Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable app.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lesli\Desktop\projects\Boomba-FM-Music-Player\app\build\Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable app.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\app.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
