@@ -1,0 +1,9 @@
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/app.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/edit_cache.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/rebuild_cache.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/list_install_components.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/install.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/install/local.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/install/strip.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/app_autogen_timestamp_deps.dir
+C:/Users/bribg/OneDrive/Documents/Boomba-FM-Music-Player/build/CMakeFiles/app_autogen.dir

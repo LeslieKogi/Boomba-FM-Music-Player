@@ -4,14 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Qt\\",
-                "C:/Qt/6.11.1/mingw_64/include/QtMultimedia"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ]
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
