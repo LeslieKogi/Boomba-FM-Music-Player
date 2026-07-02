@@ -6,20 +6,218 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>900</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Music Player</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="currentSongLabel">
+      <property name="text">
+       <string>Now Playing: No song</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="seekLayout">
+      <item>
+       <widget class="QLabel" name="timeLabel">
+        <property name="text">
+         <string>0:00</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="seekSlider">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="durationLabel">
+        <property name="text">
+         <string>0:00</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="controlsLayout">
+      <item>
+       <widget class="QPushButton" name="previousButton">
+        <property name="text">
+         <string>⏮ Previous</string>
+        </property>
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playButton">
+        <property name="text">
+         <string>▶ Play</string>
+        </property>
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pauseButton">
+        <property name="text">
+         <string>⏸ Pause</string>
+        </property>
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>⏹ Stop</string>
+        </property>
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextButton">
+        <property name="text">
+         <string>Next ⏭</string>
+        </property>
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="volumeLayout">
+      <item>
+       <widget class="QLabel" name="volumeTextLabel">
+        <property name="text">
+         <string>Volume:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="volumeSlider">
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="volumeLabel">
+        <property name="text">
+         <string>100%</string>
+        </property>
+        <property name="minimumWidth">
+         <number>40</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="statusLabel">
+      <property name="text">
+       <string>Status: Stopped</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="playlistLabel">
+      <property name="text">
+       <string>Playlist</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="playlistButtonLayout">
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>➕ Add Songs</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="removeButton">
+        <property name="text">
+         <string>➖ Remove</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearButton">
+        <property name="text">
+         <string>🗑 Clear</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="playlistCountLabel">
+        <property name="text">
+         <string>Songs: 0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="playlistWidget">
+      <property name="minimumHeight">
+       <number>200</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>900</width>
      <height>18</height>
     </rect>
    </property>
