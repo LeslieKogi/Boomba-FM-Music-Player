@@ -2,6 +2,17 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
+#include <QList>
+
+struct Song {
+    QString title;
+    QString artist;
+    QString genre;
+    QString imagePath;
+    QString filePath;
+    int duration; // Duration in seconds
+};
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +30,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QList<Song> musicLibrary; // List to store songs in the music library
 };
 #endif // MAINWINDOW_H
