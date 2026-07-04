@@ -8,17 +8,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // songs
+   // songs
    Song s1("Robbery", "Juice WRLD", "Hip Hop", 240);
-    s1.setFilePath("songs/Juice WRLD - Robbery.mp3");
+    s1.setFilePath("C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/songs/Juice WRLD - Robbery.mp3");
     m_library.addSong(s1);
 
     Song s2("Sunflower", "Post Malone", "Pop", 200);
-    s2.setFilePath("songs/Post Malone, Swae Lee - Sunflower.mp3");
+    s2.setFilePath("C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/songs/Post Malone, Swae Lee - Sunflower.mp3");
     m_library.addSong(s2);
 
     Song s3("Mirrors", "Justin Timberlake", "Pop", 220);
-    s3.setFilePath("songs/Justin Timberlake - Mirrors.mp3");
+    s3.setFilePath("C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/songs/Justin Timberlake - Mirrors.mp3");
     m_library.addSong(s3);
 
     m_currentDisplayedSongs = m_library.getAllSongs();
