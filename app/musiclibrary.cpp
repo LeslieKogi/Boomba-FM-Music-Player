@@ -36,3 +36,15 @@ QVector<Song> MusicLibrary::searchByGenre(const QString &genre) const
     }
     return result;
 }
+QVector<Song> MusicLibrary::searchByTitle(const QString &title) const
+{
+    QVector<Song> result;
+    for (const Song &song : m_songs)
+    {
+        if (song.getTitle().contains(title, Qt::CaseInsensitive))
+        {
+            result.append(song);
+        }
+    }
+    return result;
+}

@@ -1,5 +1,7 @@
 C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/mainwindow.h \
   C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/moc_predefs.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QString \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QVector \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/q20functional.h \
@@ -122,9 +124,11 @@ C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtypes.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qyieldcpu.h \
@@ -154,6 +158,15 @@ C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11
   C:/Qt/6.11.1/llvm-mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/QAudioOutput \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/QMediaPlayer \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qaudio.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qaudiooutput.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qmediaplayer.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtaudio.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -922,4 +935,6 @@ C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11
   C:/Qt/Tools/llvm-mingw1706_64/include/sys/timeb.h \
   C:/Qt/Tools/llvm-mingw1706_64/include/time.h \
   C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/stdarg.h \
-  C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/vadefs.h
+  C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include/vadefs.h \
+  C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/musiclibrary.h \
+  C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/song.h

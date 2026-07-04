@@ -13,17 +13,20 @@ public:
     QString getArtist() const;
     QString getGenre() const;
     int getDuration() const;
+    QString getFilePath() const;
 
     void setTitle(const QString &title);
     void setArtist(const QString &artist);  
     void setGenre(const QString &genre);
     void setDuration(int duration);
+    void setFilePath(const QString &filePath);
 
-    private:
+private:
     QString m_title;
     QString m_artist;
     QString m_genre;
     int m_duration;
+    QString m_filePath;
 };
 
-#endif // SONG_H
+#endif 

@@ -13,13 +13,13 @@ public:
     void removeSong(int index);
     Song getSong(int index) const;
     QVector<Song> getAllSongs() const;
-QVector<Song> searchByArtist(const QString &artist) const;
-QVector<Song> searchByGenre(const QString &genre) const;
-QVector<Song> searchByTitle(const QString &title) const;
+    QVector<Song> searchByArtist(const QString &artist) const;
+    QVector<Song> searchByGenre(const QString &genre) const;
+    QVector<Song> searchByTitle(const QString &title) const;
     int getSongCount() const;
 
 private:
     QVector<Song> m_songs;
 };
 
-#endif // MUSICLIBRARY_H
+#endif 

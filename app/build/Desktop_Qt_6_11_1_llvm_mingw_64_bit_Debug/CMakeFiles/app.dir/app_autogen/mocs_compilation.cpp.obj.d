@@ -953,6 +953,21 @@ CMakeFiles/app.dir/app_autogen/mocs_compilation.cpp.obj: \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtGui/qcursor.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtWidgets/qtabwidget.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/QMediaPlayer \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qmediaplayer.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qurl.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qtaudio.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qaudio.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/QAudioOutput \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtMultimedia/qaudiooutput.h \
+  C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/EWIEGA46WW/../../../../musiclibrary.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QVector \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qvector.h \
+  C:/Users/lesli/Desktop/projects/Boomba-FM-Music-Player/app/build/Desktop_Qt_6_11_1_llvm_mingw_64_bit_Debug/app_autogen/EWIEGA46WW/../../../../song.h \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QString \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtmochelpers.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtmocconstants.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/q20algorithm.h

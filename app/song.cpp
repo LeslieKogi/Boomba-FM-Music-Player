@@ -6,6 +6,7 @@ Song::Song()
     m_artist = "";
     m_genre = "";
     m_duration = 0;
+    m_filePath = "";
 }
 
     Song::Song(QString title, QString artist, QString genre, int duration)
@@ -52,4 +53,12 @@ Song::Song()
     {
         m_duration = duration;
     } 
+    QString Song::getFilePath() const
+{
+    return m_filePath;
+}
+void Song::setFilePath(const QString &filePath)
+{
+    m_filePath = filePath;
+}
 
