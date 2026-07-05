@@ -92,7 +92,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Boomba FM Music Player", nullptr));
-        searchLineEdit->setText(QCoreApplication::translate("MainWindow", "Search Artist or Genre", nullptr));
+        searchLineEdit->setText(QCoreApplication::translate("MainWindow", "Search Title", nullptr));
         genreComboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Genre", nullptr));
         genreComboBox->setItemText(1, QString());
 

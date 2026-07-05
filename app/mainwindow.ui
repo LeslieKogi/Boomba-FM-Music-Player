@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Search Artist or Genre</string>
+     <string>Search Title</string>
     </property>
    </widget>
    <widget class="QComboBox" name="genreComboBox">

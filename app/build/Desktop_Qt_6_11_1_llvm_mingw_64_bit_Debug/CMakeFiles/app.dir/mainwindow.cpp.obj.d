@@ -1054,4 +1054,5 @@ CMakeFiles/app.dir/mainwindow.cpp.obj: \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qfile.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qfileinfo.h \
   C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/qtimezone.h \
-  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QStringList
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QStringList \
+  C:/Qt/6.11.1/llvm-mingw_64/include/QtCore/QMap
