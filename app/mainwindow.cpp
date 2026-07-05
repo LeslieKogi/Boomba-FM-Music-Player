@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QDir>
+#include <QStringList>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,17 +11,31 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
    // songs
-   Song s1("Robbery", "Juice WRLD", "Hip Hop", 240);
-    s1.setFilePath("songs/Juice WRLD - Robbery.mp3");
-    m_library.addSong(s1);
+    QDir songsDir("songs");
+    QStringList mp3Files = songsDir.entryList(QStringList() << "*.mp3", QDir::Files);
 
-    Song s2("Sunflower", "Post Malone", "Pop", 200);
-    s2.setFilePath("songs/Post Malone, Swae Lee - Sunflower.mp3");
-    m_library.addSong(s2);
+    for (const QString &fileName : mp3Files)
+    {
+        
+        QString nameWithoutExtension = fileName;
+        nameWithoutExtension.chop(4); 
 
-    Song s3("Mirrors", "Justin Timberlake", "Pop", 220);
-    s3.setFilePath("songs/Justin Timberlake - Mirrors.mp3");
-    m_library.addSong(s3);
+        QString artist = "Unknown Artist";
+        QString title = nameWithoutExtension;
+
+        
+        int separatorIndex = nameWithoutExtension.indexOf(" - ");
+        if (separatorIndex != -1)
+        {
+            artist = nameWithoutExtension.left(separatorIndex);
+            title = nameWithoutExtension.mid(separatorIndex + 3); 
+        }
+
+        
+        Song newSong(title, artist, "Unknown", 0);
+        newSong.setFilePath("songs/" + fileName);
+        m_library.addSong(newSong);
+    }
 
     m_currentDisplayedSongs = m_library.getAllSongs();
     refreshSongList(m_currentDisplayedSongs);
