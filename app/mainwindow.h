@@ -2,23 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-<<<<<<< HEAD
-#include <QString>
-#include <QList>
-
-struct Song {
-    QString title;
-    QString artist;
-    QString genre;
-    QString imagePath;
-    QString filePath;
-    int duration; // Duration in seconds
-};
-=======
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include "musiclibrary.h"
->>>>>>> main
+#include <QListWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,7 +22,6 @@ public:
 private slots:
     void onSongClicked();
     void onPlayClicked();
-    void onPauseClicked();
     void onSearchTextChanged(const QString &text);
     void onGenreFilterChanged(const QString &genre);
     void onArtistFilterChanged(const QString &artist);
@@ -44,15 +30,18 @@ private slots:
     void onMediaStatusChanged(QMediaPlayer::MediaStatus status);
     void onDurationChanged(qint64 duration);
     void onPositionChanged(qint64 position);
+    void updateDuration(qint64 duration);
+    void updatePosition(qint64 position);
+    void setTrackPosition();
+    void setVolume(int Volume);
+    void onOpenClicked();
+    void on_songListWidget_itemClicked(QListWidgetItem *item);
+    void applyFilters();
+    void onPrevClicked();
+    void onNextClicked();
 
 private:
     Ui::MainWindow *ui;
-<<<<<<< HEAD
-    QList<Song> musicLibrary; // List to store songs in the music library
-
-private slots:
-    void onSongSelected(int currentRow); // Slot to handle song selection from the list widget.
-=======
     MusicLibrary m_library;
     QVector<Song> m_currentDisplayedSongs; 
 
@@ -64,6 +53,5 @@ private slots:
     void populateFilterBoxes();
     void initializeConnections();
     void updateSongDisplay();
->>>>>>> main
 };
 #endif 

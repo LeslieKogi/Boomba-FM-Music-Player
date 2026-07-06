@@ -6,42 +6,68 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>399</height>
+    <width>774</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-<<<<<<< HEAD
-   <widget class="QListWidget" name="songListWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>251</width>
-      <height>451</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="coverLabel">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>170</y>
-      <width>181</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-=======
+   <property name="styleSheet">
+    <string notr="true">/* The Main Background Gradient (Black, Neon Purple, Neon Blue) */
+QWidget #centralwidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #000000, 
+                                stop:0.6 #25003e, 
+                                stop:1 #002b47);
+}
+
+/* Make all text stand out in clean white */
+QLabel {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+}
+
+/* Style your buttons with Neon Purple borders and Neon Blue text */
+QPushButton {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #00ffff; /* Electric Neon Blue */
+    border: 1.5px solid #bd00ff; /* Sharp Neon Purple */
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+/* Glowing effect when you hover over buttons */
+QPushButton:hover {
+    background-color: rgba(0, 255, 255, 0.08);
+    border: 1.5px solid #00ffff; /* Flips to Neon Blue on hover */
+}
+
+/* The Music Progress Slider */
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #111122;
+    border-radius: 3px;
+}
+QSlider::sub-page:horizontal {
+    background: #00ffff; /* Neon Blue progress fill */
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: #bd00ff; /* Neon Purple knob */
+    width: 14px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    border-radius: 7px;
+}</string>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>370</x>
+      <y>30</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -53,8 +79,8 @@
    <widget class="QLineEdit" name="searchLineEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
+      <x>10</x>
+      <y>360</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -66,10 +92,10 @@
    <widget class="QComboBox" name="genreComboBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>81</width>
-      <height>22</height>
+      <x>310</x>
+      <y>360</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <item>
@@ -86,10 +112,10 @@
    <widget class="QComboBox" name="artistComboBox">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>100</y>
-      <width>81</width>
-      <height>22</height>
+      <x>210</x>
+      <y>360</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <item>
@@ -101,51 +127,172 @@
    <widget class="QListWidget" name="songListWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>256</width>
-      <height>111</height>
+      <x>10</x>
+      <y>40</y>
+      <width>361</width>
+      <height>311</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pauseButton">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>310</y>
-      <width>56</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pause</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: #0b0b12; /* Deep space black */
+color: #ffffff;            /* Crisp white song text */
+border: 1px solid #bd00ff; /* Sharp Neon Purple frame */
+border-radius: 8px;
+padding: 6px;
+
+/* How a song looks when you hover your mouse over it */
+QListWidget::item:hover {
+    background-color: rgba(0, 255, 255, 0.12); /* Subtle neon blue glow */
+    color: #00ffff;                            /* Turns text neon blue */
+    border-radius: 4px;
+}
+
+/* How the currently selected/playing song looks */
+QListWidget::item:selected {
+    background-color: #00ffff; /* Bright Neon Blue selection bar */
+    color: #000000;            /* Jet black text so it's clean and readable */
+    font-weight: bold;
+    border-radius: 4px;
+}</string>
     </property>
    </widget>
    <widget class="QPushButton" name="playButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>310</y>
-      <width>61</width>
-      <height>41</height>
+      <x>540</x>
+      <y>360</y>
+      <width>51</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Play</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../Downloads/play_button.png</normaloff>
+      <normalon>../../../../Downloads/pause_button.png</normalon>../../../../Downloads/play_button.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QSlider" name="horizontalSlider">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>270</y>
+      <x>440</x>
+      <y>320</y>
       <width>251</width>
       <height>20</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
->>>>>>> main
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currentTimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>340</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="totalTimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>340</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ImageLabel">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>80</y>
+      <width>241</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Images</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>360</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../Downloads/next_button.png</normaloff>../../../../Downloads/next_button.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="prevButton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>360</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../Downloads/previous_button.png</normaloff>../../../../Downloads/previous_button.png</iconset>
+    </property>
+   </widget>
+   <widget class="QSlider" name="volumeSlider">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>240</y>
+      <width>20</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Vertical</enum>
     </property>
    </widget>
   </widget>
@@ -154,12 +301,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-<<<<<<< HEAD
+     <width>774</width>
      <height>33</height>
-=======
-     <height>22</height>
->>>>>>> main
     </rect>
    </property>
   </widget>

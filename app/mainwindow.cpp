@@ -1,70 +1,95 @@
+#include <QDebug>
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QDir>
-<<<<<<< HEAD
-#include <QFileInfo>
-#include <QStringList>
-=======
 #include <QStringList>
 #include <QMap>
->>>>>>> main
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QCoreApplication>
+#include <QMessageBox>
+#include <QStandardPaths>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , currentIndex(-1)
+        
 {
     ui->setupUi(this);
-<<<<<<< HEAD
-    connect(ui->songListWidget, &QListWidget::currentRowChanged, this, &MainWindow::onSongSelected); // Connect the currentRowChanged signal to the onSongSelected slot.
-
-    ui->songListWidget->clear();
-musicLibrary.clear();
-
-QDir songsDir("songs");
-if (!songsDir.exists()) {
-    songsDir = QDir("../songs");
-}
-
-QStringList mp3Files = songsDir.entryList(QStringList() << "*.mp3", QDir::Files);
-
-// THE ONLY LOOP YOU NEED
-for (const QString &fileName : mp3Files) {
-    Song track;
-    track.filePath = "songs/" + fileName;
-
-    QString cleanName = fileName;
-    cleanName.chop(4); // Remove ".mp3"
-
-    QList<QString> nameParts = cleanName.split("- ");
-
-    // Split Artist and Title safely
-    if (nameParts.size() >= 2) {
-        track.artist = nameParts[0].trimmed();
-        track.title = nameParts[1].trimmed();
-    } else {
-        track.artist = "Unknown Artist";
-        track.title = cleanName.trimmed();
+    this->setStyleSheet(R"(
+        QMainWindow{
+            background-color: #0d0b14;
+            }
+        QLabel{
+            color: #e1dfeb;
+            } 
+        QLineEdit{
+            background-color: #161224;
+            color: #ffffff;
+            border: 1px solid #8a2be2;
+            border-radius: 6px;
+            padding: 4px;
+            }
+        QComboBox{
+            background-color: #161224;
+            color: #ffffff;
+            border: 1px solid #8a2be2;
+            border-radius: 4px;
+            padding: 2px;
+            } 
+        QListWidget, QListView{
+            background-color: #161224;
+            color: #e1dfeb
+            bordedr: 1px solid #443c5c;
+            border-radius:8px;
+            outline: none;
+            }
+        QListWidget::item:hover{
+            background-color: #251f3b;
+            }
+        QListWidget::item:selcted{
+            background-color: #8a2be2;
+            color: #ffffff;
+            }
+        QSlider::groove:horizontal{
+            height: 4px;
+            background: #251f3b;
+            border-radius: 2px;
+            }
+        QSlider::sub-page:horizontal{
+            background: #8a2be2;
+            border-radius: 2px;
+            }  
+        QSlider::handle:horizontal{
+            background: #ffffff;
+            width: 12px;
+            margin: -4px 0;
+            border-radius: 6px;
+            }
+        QPushButton#playButton {
+            background-color: #b61db9;
+            color: #8a2eb2;
+            border: 2px solid #8a2be2;
+            border-radius: 25px;
+            image: url(images/play.png);
+            }
+        QPushButton:hover{
+            background-color: #8a2be2;
+            color: #ffffff;
+            }
+    )");
+    QPixmap pix("images/default.png");
+    if (!pix.isNull()) {
+        pix.load("../images/default.png");
     }
-
-    track.genre = "My Music";
-
-    // Handle Album Art Paths cleanly
-    QString customImagePath = "images/" + track.title + ".jpg";
-    if (QFileInfo::exists(customImagePath)) {
-        track.imagePath = customImagePath;
-    } else {
-        track.imagePath = "images/default.png"; // Fallback image
+    if (!pix.isNull()){
+        ui->ImageLabel->setText("");
+        ui->ImageLabel->setPixmap(pix.scaled(ui->ImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     }
-
-    // Job 1: Save it to your backend library vector
-    musicLibrary.append(track);
-
-    // Job 2: Display it on the UI immediately
-    ui->songListWidget->addItem(track.artist + " - " + track.title);
-}
-=======
-
+    else{
+        qDebug() << "Boomba FM Error: Cannot find default.png in images/ or.../images/";
+    }
     //hardcoded genre mapping 
     QMap<QString, QString> genreLookup;
     genreLookup["21 Savage - Bank Account.mp3"] = "Hip Hop";
@@ -146,7 +171,6 @@ for (const QString &fileName : mp3Files) {
     mediaPlayer->setAudioOutput(audioOutput);
 
     initializeConnections();
->>>>>>> main
 }
 
 MainWindow::~MainWindow()
@@ -155,34 +179,24 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-<<<<<<< HEAD
-void MainWindow::onSongSelected(int currentRow) {
-    if (currentRow <0 || currentRow >=musicLibrary.size())
-    return; // If the selected row is out of bounds, do nothing.
-
-    Song selectedTrack = musicLibrary [currentRow]; // Get the selected song from the music library based on the current row.
-    
-    QPixmap pix(selectedTrack.imagePath); // Load the album art image for the selected song.
-    if (!pix.isNull()) {
-        ui-> coverLabel->setPixmap(pix.scaled(ui->coverLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation)); // If the image is valid, display it in the cover label. 
-    }
-=======
 void MainWindow::initializeConnections()
 {
     connect(ui->playButton, &QPushButton::clicked, this, &MainWindow::onPlayClicked);
-    connect(ui->pauseButton, &QPushButton::clicked, this, &MainWindow::onPauseClicked);
+    connect(ui->prevButton, &QPushButton::clicked, this, &MainWindow::onPrevClicked);
+    connect(ui->nextButton, &QPushButton::clicked, this, &MainWindow::onNextClicked);
     connect(ui->songListWidget, &QListWidget::itemClicked, this, &MainWindow::onSongClicked);
     connect(ui->searchLineEdit, &QLineEdit::textChanged, this, &MainWindow::onSearchTextChanged);
     connect(ui->genreComboBox, &QComboBox::currentTextChanged, this, &MainWindow::onGenreFilterChanged);
     connect(ui->artistComboBox, &QComboBox::currentTextChanged, this, &MainWindow::onArtistFilterChanged);
 
     connect(mediaPlayer, &QMediaPlayer::mediaStatusChanged, this, &MainWindow::onMediaStatusChanged);
-    connect(mediaPlayer, &QMediaPlayer::durationChanged, this, &MainWindow::onDurationChanged);
-    connect(mediaPlayer, &QMediaPlayer::positionChanged, this, &MainWindow::onPositionChanged);
+    connect(mediaPlayer, &QMediaPlayer::durationChanged, this, &MainWindow::updateDuration);
+    connect(mediaPlayer, &QMediaPlayer::positionChanged, this, &MainWindow::updatePosition);
 
-    connect(ui->horizontalSlider, &QSlider::sliderMoved, this, [this](int position) {
-        mediaPlayer->setPosition(position * 1000);
-    });
+    connect(ui->horizontalSlider, &QSlider::sliderReleased, this, &MainWindow::setTrackPosition);
+    connect(ui->volumeSlider, &QSlider::valueChanged, this, &MainWindow::setVolume);
+    connect(ui->openButton, &QPushButton::clicked, this, &MainWindow::onOpenClicked);
+    connect(ui->songListWidget, &QListWidget::itemClicked, this, &MainWindow::onSongClicked);
 }
 
 void MainWindow::refreshSongList(const QVector<Song> &songs)
@@ -212,23 +226,55 @@ void MainWindow::populateFilterBoxes()
 
 void MainWindow::onSongClicked()
 {
-    currentIndex = ui->songListWidget->currentRow();
+    int currentIndex = ui->songListWidget->currentRow();
     if (currentIndex < 0 || currentIndex >= m_currentDisplayedSongs.size()) return;
 
     QString filePath = m_currentDisplayedSongs[currentIndex].getFilePath();
     mediaPlayer->setSource(QUrl::fromLocalFile(filePath));
+    mediaPlayer->play();
+    ui->playButton->setChecked(true);
+
+    QString appDir = QCoreApplication::applicationDirPath();
+
+    QFileInfo songInfo(filePath);
+    QString songName = songInfo.completeBaseName();
+
+    QString imagePathJpg = appDir + "/images/" + songName + ".jpg";
+    QString imagePathPng = appDir + "/images/" + songName + ".png";
+    QString defaultPath = appDir + "/images/default.png";
+
+    QString finalImagePath = defaultPath;
+
+    if (QFileInfo::exists(imagePathJpg)){
+        finalImagePath = imagePathJpg;
+    }
+    else if(QFileInfo::exists(imagePathPng)){
+        finalImagePath = imagePathPng;
+    }
+    
+     qDebug() << "==================================================";
+    qDebug() << "Looking for JPG at:" << imagePathJpg << " | Found:" << QFileInfo::exists(imagePathJpg);
+    qDebug() << "Looking for PNG at:" << imagePathPng << " | Found:" << QFileInfo::exists(imagePathPng);
+    qDebug() << "Displaying image from path:" << finalImagePath;
+    qDebug() << "==================================================";
+
+    QPixmap pixmap(finalImagePath);
+    if(!pixmap.isNull()){
+        ui->ImageLabel->setPixmap(pixmap.scaled(ui->ImageLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    }
+    
 }
 
 void MainWindow::onPlayClicked()
 {
     if (mediaPlayer->source().isValid()) {
-        mediaPlayer->play();
+        if (ui->playButton->isChecked())  {
+            mediaPlayer->play();
+        }
+        else{
+            mediaPlayer->pause();
+        }
     }
-}
-
-void MainWindow::onPauseClicked()
-{
-    mediaPlayer->pause();
 }
 
 void MainWindow::onSearchTextChanged(const QString &text)
@@ -265,5 +311,106 @@ void MainWindow::onDurationChanged(qint64 duration)
 void MainWindow::onPositionChanged(qint64 position)
 {
     ui->horizontalSlider->setValue(position / 1000);
->>>>>>> main
+}
+void MainWindow::updateDuration(qint64 duration){
+    ui->horizontalSlider->setRange(0, duration);
+
+    int seconds = (duration / 1000) % 60;
+    int minutes = (duration / 1000) / 60;
+
+    QString timeText = QString("%1:%2")
+        .arg(minutes, 2, 10, QChar('0'))
+        .arg(seconds, 2, 10, QChar('0'));
+
+    ui->totalTimeLabel->setText(timeText);    
+}
+void MainWindow::updatePosition(qint64 position){
+    if (!ui->horizontalSlider->isSliderDown()) {
+        ui->horizontalSlider->setValue(position);
+    }
+    int seconds = (position / 1000) % 60;
+    int minutes = (position / 60000) % 60;
+    
+    QString timeText = QString("%1:%2")
+        .arg(minutes, 2, 10, QChar('0'))
+        .arg(seconds, 2, 10, QLatin1Char('0'));
+
+    ui->currentTimeLabel->setText(timeText);
+}
+void MainWindow::setTrackPosition(){
+    mediaPlayer->setPosition(ui->horizontalSlider->value());
+}
+void MainWindow::setVolume(int volume) {
+    audioOutput->setVolume(volume / 100.0);
+}
+void MainWindow::onOpenClicked(){
+    QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation);
+    QString filePath = QFileDialog::getOpenFileName(
+        this,
+        tr("Select a Song"),
+        defaultPath,
+        tr("Audio Files (*.mp3 *.wav *.m4a *.ogg *.flac)")
+    );
+    if (filePath.isEmpty()) {
+        return;
+    }
+    for (const QString &filePath : filePath) {
+        QFileInfo fileInfo(filePath);
+        QString cleanSongTitle = fileInfo.completeBaseName();
+
+        QListWidgetItem *item = new QListWidgetItem(cleanSongTitle, ui->songListWidget);
+        item->setData(Qt::UserRole, filePath);
+    }
+    if (!filePath.isEmpty()) {
+        mediaPlayer->setSource(QUrl::fromLocalFile(filePath));
+        mediaPlayer->play();
+        QString songTitle = QFileInfo(filePath).baseName();
+        ui->label->setText("Playing: " + songTitle);
+    }
+}
+void MainWindow::on_songListWidget_itemClicked(QListWidgetItem *item){
+    Q_UNUSED(item);
+
+    int currentRow = ui->songListWidget->currentRow();
+
+    if (currentRow >= 0 && currentRow < m_currentDisplayedSongs.size()){
+        Song selectedSong = m_currentDisplayedSongs[currentRow];
+        QString filePath = selectedSong.getFilePath();
+        mediaPlayer->setSource(QUrl::fromLocalFile(filePath));
+        mediaPlayer->play();
+        ui->label->setText("Playing: " + selectedSong.getTitle() + " — " + selectedSong.getArtist());
+    }
+}
+void MainWindow::applyFilters() {
+    QString searchText = ui->searchLineEdit->text().trimmed().toLower();
+    QString selectedGenre = ui->genreComboBox->currentText().trimmed().toLower();
+    QString selectedArtist = ui->artistComboBox->currentText();
+
+    qDebug() << "SEARCH : "<< searchText << "|GENRE : " << selectedGenre << "|ARTIST : " << selectedArtist;
+
+    QVector<Song> filteredSongs;
+    for (const Song &song : m_library.getAllSongs()) {
+        bool matchesSearch = searchText.isEmpty() || song.getTitle().toLower().contains(searchText)||song.getArtist().toLower().contains(searchText);
+        bool matchesGenre = (selectedGenre == "all genres") || (selectedGenre == "all")||selectedGenre.isEmpty()|| (song.getGenre().toLower() == selectedGenre);
+        bool matchesArtist = (selectedArtist == "all artists") || (selectedArtist == "all")||selectedArtist.isEmpty()|| (song.getArtist().toLower() == selectedArtist);
+
+        if (matchesSearch && matchesGenre && matchesArtist) {
+            filteredSongs.append(song);
+        }
+    }
+    refreshSongList(filteredSongs);
+}
+void MainWindow::onPrevClicked(){
+    int currentRow = ui->songListWidget->currentRow();
+    if (currentRow > 0) {
+        ui->songListWidget->setCurrentRow(currentRow - 1);
+        emit ui->songListWidget->itemClicked(ui->songListWidget->currentItem());
+    }
+}
+void MainWindow::onNextClicked() {
+    int currentRow = ui->songListWidget->currentRow();
+    if (currentRow < ui->songListWidget->count() - 1) {
+        ui->songListWidget->setCurrentRow(currentRow + 1);
+        emit ui->songListWidget->itemClicked(ui->songListWidget->currentItem());
+    }
 }
